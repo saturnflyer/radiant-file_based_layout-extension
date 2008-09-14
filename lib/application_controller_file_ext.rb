@@ -6,12 +6,6 @@ module ApplicationControllerFileExt
         helper_method :unless_content
         helper_method :if_url
         helper_method :unless_url
-        
-        before_filter :correct_relative_url_root
-        
-        def correct_relative_url_root
-          request.relative_url_root = '/'
-        end
             
         def content(options={})
           part_page = @page
